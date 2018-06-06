@@ -15,4 +15,13 @@ with open('P1Input.txt') as f:
 			last = int(line[i])
 			if first == last:
 				total += last
-	print(total)
+	print('Problem 1 Part 1 solution is: {}'.format(total))
+	total = 0
+	halfLen = int(len(line)/2)
+	for i in range(halfLen):
+		if i < halfLen-1:
+			curr = int(line[i])
+			nxt = int(line[i+halfLen])
+			if curr == nxt:
+				total += curr*2
+	print('Problem 1 Part 2 solution is: {}'.format(total))
