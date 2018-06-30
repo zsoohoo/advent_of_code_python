@@ -24,5 +24,5 @@ def stepThrough(commands, mode):
 with open('P5Input.txt') as f:
 	commands = [int(line.rstrip()) for line in f]
 	#commands = [0,3,0,1,-3]
-	print('Problem 2 Part 1 solution is: {}'.format(stepThrough(commands, 0)))
-	print('Problem 2 Part 2 solution is: {}'.format(stepThrough(commands, 1)))
+	print('Problem 5 Part 1 solution is: {}'.format(stepThrough(commands, 0)))
+	print('Problem 5 Part 2 solution is: {}'.format(stepThrough(commands, 1)))
