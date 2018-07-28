@@ -3,7 +3,7 @@ def stepThrough(commands, mode):
 	current = 0
 	iterations = 0
 	highest = 0
-	if mode == 0:
+	if mode == 0:	
 		while current < len(commands):
 			move = commands[current] + offset[current]
 			offset[current] += 1

@@ -28,8 +28,6 @@ def getCorrectWeight(parent):
 			childNodeWeight = getCorrectWeight(child)
 			childWeight.append(childNodeWeight)
 			runningWeight += childNodeWeight
-		#print(node)
-		#print(childNodes)
 		if found is False:
 			leastCommon = collections.Counter(childWeight).most_common()[-1]
 			mostCommon = collections.Counter(childWeight).most_common()[0]
@@ -37,7 +35,7 @@ def getCorrectWeight(parent):
 				incorrectNode = childNodes[childWeight.index(leastCommon[0])]
 				difference = mostCommon[0]-leastCommon[0]
 				correctValue = weights[incorrectNode] + difference
-				print('Problem 5 Part 2 solution: {}'.format(correctValue))
+				print('Problem 7 Part 2 solution: {}'.format(correctValue))
 				found = True
 
 	return runningWeight
@@ -49,5 +47,5 @@ with open('P7Input.txt') as f:
 		weights[name] = int(weight)
 		children[name] = nodes
 	root = findRoot(children, names)
-	print('Problem 5 Part 1 solution: {}'.format(root))
+	print('Problem 7 Part 1 solution: {}'.format(root))
 	getCorrectWeight(root)
